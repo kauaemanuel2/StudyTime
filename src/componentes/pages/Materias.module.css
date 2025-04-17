@@ -1,0 +1,270 @@
+.dashboardContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  color: black;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.headerButtons {
+  display: flex;
+  gap: 1rem;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.8rem;
+  color: #1d3557;
+  margin-bottom: 1.5rem;
+}
+
+.iconTitulo {
+  color: #457b9d;
+}
+
+.addButton {
+  background: #04BF55;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addButton:hover {
+  background-color: #21867a;
+}
+
+.resetButton {
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.resetButton:hover {
+  background: #fed7d7;
+  border-color: #feb2b2;
+}
+
+.contentWrapper {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.semMaterias {
+  color: #999;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  padding-bottom: 20px; /* Espaço extra no final */
+}
+
+.card {
+  min-height: 140px; /* Altura mínima aumentada */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.materiaNome {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.2rem;
+  color: #1d3557;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.materiaNome:hover {
+  color: #457b9d;
+}
+
+.badge {
+  background-color: #e2e8f0;
+  color: #1d3557;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  margin-left: auto;
+}
+
+.cardActions {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap
+}
+
+.statsButton,
+.colorButton,
+.editButton,
+.removeButton {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  width: 32px;
+  height: 32px;
+}
+
+.statsButton {
+  background-color: #f1f5f9;
+  color: #1d3557;
+}
+
+.statsButton:hover {
+  background-color: #e2e8f0;
+}
+
+.colorButton {
+  background-color: #f1f5f9;
+  color: #1d3557;
+}
+
+.colorButton:hover {
+  background-color: #e2e8f0;
+}
+
+.editButton {
+  background-color: #f1f5f9;
+  color: #ffd166;
+}
+
+.editButton:hover {
+  background-color: #fff3bf;
+}
+
+.removeButton {
+  background-color: #f1f5f9;
+  color: #e63946;
+}
+
+.removeButton:hover {
+  background-color: #fee2e2;
+}
+
+.contentWrapper {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-height: 70vh; /* Usando viewport height */
+  min-height: 300px; /* Altura mínima garantida */
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.contentWrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.contentWrapper::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.contentWrapper::-webkit-scrollbar-thumb {
+  background: #457b9d;
+  border-radius: 10px;
+}
+
+.contentWrapper::-webkit-scrollbar-thumb:hover {
+  background: #1d3557;
+}
+
+@media (max-width: 768px) {
+  .dashboardContainer {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem 0.5rem;
+  }
+
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .lista {
+    grid-template-columns: 1fr; /* 1 coluna em mobile */
+  }
+
+  .card {
+    min-height: 120px;
+    padding: 1rem;
+  }
+
+  .headerButtons {
+    flex-wrap: wrap; /* Quebra de linha em botões */
+  }
+}
+
+/* Tablet (768px-1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .lista {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  }
+}

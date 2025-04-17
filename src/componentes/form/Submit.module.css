@@ -1,0 +1,39 @@
+.btn {
+    background-color: #04BF55;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .btn:hover {
+    background-color: #059448;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(4, 191, 85, 0.25);
+  }
+  
+  .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(4, 191, 85, 0.2);
+  }
+  
+  /* Responsivo */
+  @media (max-width: 480px) {
+    .btn {
+      padding: 0.9rem 1.5rem;
+      font-size: 0.95rem;
+    }
+  }

@@ -1,0 +1,174 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modalContent h3 {
+    margin-top: 0;
+    color: #1d3557;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .badge {
+    background-color: #1d3557;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+  
+  .semAtividades {
+    color: #999;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.1rem;
+  }
+  
+  .listaAtividades {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .atividadeItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .atividadeItem:last-child {
+    border-bottom: none;
+  }
+  
+  .atividadeInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+  }
+  
+  .concluirButton {
+    background: none;
+    border: 2px solid #2a9d8f;
+    color: #2a9d8f;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .concluirButton:hover {
+    background-color: #2a9d8f;
+    color: white;
+  }
+  
+  .concluirButton.concluido {
+    background-color: #2a9d8f;
+    color: white;
+  }
+  
+  .atividadeTexto {
+    flex: 1;
+  }
+  
+  .atividadeTexto.concluido {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .atividadeData {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    color: #666;
+  }
+  
+  .atividadeAcoes {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .editarButton, .removerButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+  }
+  
+  .editarButton:hover {
+    color: #457b9d;
+  }
+  
+  .removerButton:hover {
+    color: #e63946;
+  }
+  
+  .editingContainer {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .editInput {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+  }
+  
+  .saveEditButton {
+    padding: 0.5rem 1rem;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .modalFooter {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .fecharButton {
+    padding: 0.5rem 1rem;
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }

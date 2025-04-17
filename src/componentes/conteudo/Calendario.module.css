@@ -1,0 +1,167 @@
+/* Container principal */
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+/* Header com navegação */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: clamp(1.2rem, 4vw, 1.5rem);
+  white-space: nowrap;
+  color: #2d3748;
+}
+
+.header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #2b6cb0;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.header button:hover {
+  background: #ebf8ff;
+}
+
+/* Dias da semana */
+.semana {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* Grid principal - TAMANHO AQUI */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+/* Cada dia - TAMANHO PERFEITO */
+.dia {
+  height: 90px; /* Altura fixa ideal */
+  padding: 4px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Conteúdo do dia */
+.diaContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.numeroDia {
+  text-align: right;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+/* Eventos - tamanho ajustado */
+.eventosContainer {
+  flex: 1;
+  overflow: hidden;
+}
+
+.evento {
+  font-size: 0.8rem;
+  padding: 4px 6px;
+  margin-bottom: 4px;
+  background: #f0f5ff;
+  border-radius: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.maisEventos {
+  font-size: 0.7rem;
+  color: #718096;
+  text-align: center;
+  margin-top: 2px;
+}
+
+/* Estados visuais */
+.hoje {
+  background-color: #ebf8ff;
+  border-color: #63b3ed;
+}
+
+.outsideMonth {
+  opacity: 0.5;
+  background-color: #f8fafc;
+}
+
+/* Cores de urgência */
+.urgente { border-left: 3px solid #fc8181; }
+.moderada { border-left: 3px solid #f6ad55; }
+.baixa { border-left: 3px solid #68d391; }
+
+@media (max-width: 768px) {
+  .grid {
+    gap: 4px;
+  }
+
+  .dia {
+    height: 70px; /* Altura reduzida */
+    font-size: 0.8rem;
+  }
+
+  .evento {
+    font-size: 0.65rem; /* Texto menor */
+    padding: 2px;
+  }
+
+  .header {
+    flex-direction: column; /* Empilha navegação */
+    gap: 0.5rem;
+  }
+}
+
+/* Dias da semana em mobile */
+@media (max-width: 480px) {
+  .semana {
+    font-size: 0.7rem;
+  }
+
+  .dia {
+    height: 60px;
+  padding: 2px;
+  font-size: 0.7rem;
+  }
+  .header {
+    flex-direction: row; 
+    overflow-x: auto; 
+    padding-bottom: 0.5rem;
+  }
+
+  .navigation button {
+    padding: 0.5rem;
+    min-width: 40px; 
+  }
+}

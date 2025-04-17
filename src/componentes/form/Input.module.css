@@ -1,0 +1,40 @@
+.form_control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .form_control label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 1rem;
+    margin-left: 0.2rem;
+  }
+  
+  .form_control input {
+    padding: 0.9rem 1.2rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .form_control input:focus {
+    outline: none;
+    border-color: #0477BF;
+    box-shadow: 0 0 0 3px rgba(4, 119, 191, 0.15);
+    background-color: white;
+  }
+  
+  .form_control input::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+  }
+  
+  /* Estado de erro */
+  .form_control.invalid input {
+    border-color: #f87171;
+    background-color: #fef2f2;
+  }

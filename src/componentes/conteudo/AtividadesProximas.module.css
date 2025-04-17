@@ -1,0 +1,109 @@
+.atividadesContainer {
+  max-height: 60vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.listaAtividades {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.atividadesContainer h3 {
+  color: #2D3748;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f2f5;
+}
+
+.atividadesContainer ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.atividadesContainer li {
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: #f8fafc;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.atividadesContainer li:hover {
+  transform: translateX(5px);
+}
+
+.atividadesContainer strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.evento-titulo {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.evento-data {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.listaAtividades::-webkit-scrollbar {
+  width: 8px;
+  background: #f1f1f1;
+}
+
+.listaAtividades::-webkit-scrollbar-thumb {
+  background: #0477BF;
+  border-radius: 4px;
+}
+
+.listaAtividades::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Estilos de urgência */
+.urgente {
+  border-left: 4px solid #ff4d4d;
+  background: #fff5f5;
+}
+
+.moderada {
+  border-left: 4px solid #ffa500;
+  background: #fffaf0;
+}
+
+.baixa {
+  border-left: 4px solid #4caf50;
+  background: #f0fff4;
+}
+
+.removerBtn {
+  background: transparent;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: color 0.2s ease;
+}
+
+.removerBtn:hover {
+  color: red;
+}
+
+.atividadeInfo {
+  display: inline-block;
+  width: 90%;
+}
+
+@media (min-width: 1024px) {
+  .atividadesContainer {
+    max-height: 70vh;
+  }
+}
